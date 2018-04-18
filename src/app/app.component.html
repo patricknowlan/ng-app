@@ -1,11 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="grid">
+  <div class="aside">
+    Nav
+  </div>
 
-<h1>
-  Winery List
-</h1>
+  <div class="content">
+    <mat-nav-list>
+      <a mat-list-item [href]="vine.winery_url" *ngFor="let vine of vines"> {{ vine.name }} </a>
+    </mat-nav-list>
+  </div>
+  
+  <div class="map">MAP VIEW HERE</div>
+</div>
 
-<mat-nav-list>
-  <a mat-list-item [href]="vine.winery_url" *ngFor="let vine of vines"> {{ vine.name }} </a>
-</mat-nav-list>
+
 
 
