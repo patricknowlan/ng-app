@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule }    from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
+import { VineService } from './vine.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo:'/home', pathMatch: 'full' },
@@ -20,9 +22,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
-    )
+    ),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [VineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
