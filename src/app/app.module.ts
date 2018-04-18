@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
+import {MatListModule} from '@angular/material';
+
 
 
 import { AppComponent } from './app.component';
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
     ),
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   providers: [VineService],
   bootstrap: [AppComponent]
