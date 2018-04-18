@@ -1,10 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
 import { VineService } from './vine.service';
+
+const appRoutes: Routes = [
+  { path: '', redirectTo:'/home', pathMatch: 'full' },
+  { path: 'home', component: AppComponent }
+];
 
 
 @NgModule({
@@ -13,6 +19,10 @@ import { VineService } from './vine.service';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: false } // <-- debugging purposes only
+    ),
     HttpClientModule
   ],
   providers: [VineService],
