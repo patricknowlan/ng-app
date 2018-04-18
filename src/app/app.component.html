@@ -1,15 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="grid">
+  <div class="aside">
+    Nav
+  </div>
 
-<h1>
-  Winery List
-</h1>
+  <div class="content">
+    <h1>
+      Winery List
+    </h1>
 
-<div>
-  <a *ngFor="let vine of vines" class="col-1-4">
-    <div class="module ">
-      <h4>{{vine.name}}</h4>
+    <div>
+      <a *ngFor="let vine of vines" class="col-1-4">
+        <div class="module ">
+          <h4>{{vine.name}}</h4>
+        </div>
+      </a>
     </div>
-  </a>
+  </div>
+
+  <div class="map">Map</div>
 </div>
+
+
 
 
