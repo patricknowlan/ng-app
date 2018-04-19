@@ -1,12 +1,12 @@
 <div class="grid">
-  <div class="aside">
-    Nav
+  <div class="aside icon-bar">
+      <a href="#"><i class="fa fa-wine-glass"></i></a> 
+      <a href="#"><i class="fa fa-beer"></i></a> 
+      <a href="#"><i class="fa fa-info-circle"></i></a>
   </div>
 
   <div class="content">
-    <mat-nav-list>
-      <a mat-list-item [href]="vine.winery_url" *ngFor="let vine of vines"> {{ vine.name }} </a>
-    </mat-nav-list>
+    <app-main-list></app-main-list>
   </div>
   
   <div class="map">MAP VIEW HERE</div>
