@@ -5,7 +5,7 @@ body {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(15, 2fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     height: 100vh;
@@ -17,13 +17,35 @@ body {
     background-color: grey;
   }
 .content { 
-    grid-column: 2 / 5;
+    grid-column: 2 / 6;
     grid-row: 1;
     overflow: scroll;  
 }
 .map {
-    grid-column: 5 / 13;
+    grid-column: 6 / 16;
     grid-row: 1;
-    background-color: darkcyan;
+}
+
+/* Side bar navigation */
+.icon-bar {
+    width: auto; /* Set a specific width */
+    background-color: #7F1734; /* Dark-red background */
+}
+
+.icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+    background-color: #5e1126; /* Add a hover color */
+}
+
+.active {
+    background-color: #5e1126; /* Add an active/current color */
 }
   
