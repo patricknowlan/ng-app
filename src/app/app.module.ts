@@ -2,12 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
-import {MatListModule} from '@angular/material';
+import { MatListModule } from '@angular/material';
+import { CommonModule } from '@angular/common';
+
 
 
 
 import { AppComponent } from './app.component';
 import { VineService } from './vine.service';
+import { MainListComponent } from './main-list/main-list.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo:'/home', pathMatch: 'full' },
@@ -17,7 +20,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainListComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,8 @@ const appRoutes: Routes = [
       { enableTracing: false } // <-- debugging purposes only
     ),
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    CommonModule
   ],
   providers: [VineService],
   bootstrap: [AppComponent]
