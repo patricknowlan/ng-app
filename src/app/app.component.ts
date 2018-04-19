@@ -9,6 +9,7 @@ import { VineService } from './vine.service';
 })
 export class AppComponent {
   title = 'Vinery';
+  public selectedVineryOption: string = "wines";
 
   vines: Vine[] = [];
   brews: Vine[] = [];

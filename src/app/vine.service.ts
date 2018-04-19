@@ -23,16 +23,10 @@ export class VineService {
 
   getWineries (): Observable<Vine[]> {
     return this.http.get<Vine[]>(this.winesUrl)
-      .pipe(
-        tap(wineries => console.log(wineries)
-      ));
   }
 
   getBreweries (): Observable<Vine[]> {
     return this.http.get<Vine[]>(this.brewsUrl)
-      .pipe(
-        tap(breweries => console.log(breweries)
-      ));
   }
 }
 
