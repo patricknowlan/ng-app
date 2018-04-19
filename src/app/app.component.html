@@ -1,12 +1,12 @@
 <div class="grid">
   <div class="aside icon-bar">
-      <a href="#"><i class="fa fa-wine-glass"></i></a> 
-      <a href="#"><i class="fa fa-beer"></i></a> 
+      <a (click)="selectedVineryOption = 'wines'"><i class="fa fa-wine-glass"></i></a> 
+      <a (click)="selectedVineryOption = 'beers'"><i class="fa fa-beer"></i></a> 
       <a href="#"><i class="fa fa-info-circle"></i></a>
   </div>
 
   <div class="content">
-    <app-main-list></app-main-list>
+    <app-main-list [vineryOption]="selectedVineryOption"></app-main-list>
   </div>
   
   <div class="map">
