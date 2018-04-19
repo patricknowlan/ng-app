@@ -14,16 +14,24 @@ const httpOptions = {
 @Injectable()
 export class VineService {
 
-  private winesUrl = 'http://www.tannins.io/api/wineries';  // URL to web api
+  private winesUrl = 'http://www.tannins.io/api/wineries';
+  private brewsUrl = 'https://vast-sands-73618.herokuapp.com/api/breweries';
+
 
   constructor(
     private http: HttpClient) { }
 
-  /** GET heroes from the server */
   getWineries (): Observable<Vine[]> {
     return this.http.get<Vine[]>(this.winesUrl)
       .pipe(
         tap(wineries => console.log(wineries)
+      ));
+  }
+
+  getBreweries (): Observable<Vine[]> {
+    return this.http.get<Vine[]>(this.brewsUrl)
+      .pipe(
+        tap(breweries => console.log(breweries)
       ));
   }
 }
