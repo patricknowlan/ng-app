@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { Vine } from './../vine';
 import { VineService } from './../vine.service';
 
@@ -10,14 +12,20 @@ import { VineService } from './../vine.service';
 export class DashboardComponent {
 
   title = 'Vinery';
-  public selectedVineryOption: string = 'wines';
+  public selectedVineryOption: string;
 
   vines: Vine[] = [];
   brews: Vine[] = [];
 
-  constructor(private vineService: VineService) { }
+  constructor(private route: ActivatedRoute, private vineService: VineService) { }
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if(!params.type) this.selectedVineryOption = "wines";
+      else {
+        this.selectedVineryOption = params.type;
+      }
+    });
     this.getWineries();
     this.getBreweries();
   }
