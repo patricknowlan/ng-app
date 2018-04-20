@@ -1,19 +1,6 @@
 <div class="grid">
-  <div class="aside icon-bar">
-      <a (click)="selectedVineryOption = 'wines'"><i class="fa fa-wine-glass"></i></a> 
-      <a (click)="selectedVineryOption = 'beers'"><i class="fa fa-beer"></i></a> 
-      <a href="#"><i class="fa fa-info-circle"></i></a>
+  <div class="aside">
+    <app-sidebar-nav></app-sidebar-nav>
   </div>
-
-  <div class="content">
-    <app-main-list [vineryOption]="selectedVineryOption"></app-main-list>
-  </div>
-  
-  <div class="map">
-    <route-map></route-map>
-  </div>
+  <router-outlet></router-outlet>
 </div>
-
-
-
-

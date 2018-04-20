@@ -20,8 +20,9 @@ export class MainListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    for (let propName in changes) {  
+    for (let propName in changes) {
       let change = changes[propName];
+      console.log("change", change);
       if(change.currentValue === "wines"){
         this.getWineries();
       }
@@ -44,7 +45,7 @@ export class MainListComponent implements OnInit, OnChanges {
   getBreweries(): void {
     this.vineService.getBreweries()
       .subscribe(
-        (data: Vine[]) => { 
+        (data: Vine[]) => {
           this.vines = data;
         },
         err => console.error(err)
