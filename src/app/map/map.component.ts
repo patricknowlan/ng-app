@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-import {} from '@types/googlemaps';
+import { } from '@types/googlemaps';
 
 @Component({
-  selector: 'route-map',
+  selector: 'app-route-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })

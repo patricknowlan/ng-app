@@ -1,49 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 .grid {
-    display: grid;
-    grid-template-columns: 90px 1fr 3fr;
-    grid-gap: 10px;
-    grid-auto-rows: auto;
-    height: 100vh;
+  display: grid;
+  grid-template-columns: 90px auto 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: auto;
+  height: 100vh;
 }
-.aside {
-    grid-column: 1;
-    grid-row: 1;
-    background-color: grey;
-  }
-.content { 
-    grid-column: auto;
-    overflow: auto;  
-}
-.map {
-    grid-column: auto;
-}
-
-/* Side bar navigation */
-.icon-bar {
-    width: auto; /* Set a specific width */
-    background-color: #7F1734; /* Dark-red background */
-}
-
-.icon-bar a {
-    display: block; /* Make the links appear below each other instead of side-by-side */
-    text-align: center; /* Center-align text */
-    padding: 16px; /* Add some padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
-    color: white; /* White text color */
-    font-size: 36px; /* Increased font-size */
-}
-
-.icon-bar a:hover {
-    background-color: #5e1126; /* Add a hover color */
-}
-
-.active {
-    background-color: #5e1126; /* Add an active/current color */
-}
-  
