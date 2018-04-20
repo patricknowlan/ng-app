@@ -1,1 +1,3 @@
-<ngui-map [options]="mapOptions"></ngui-map>
+<ngui-map [options]="mapOptions">
+  <marker *ngFor="let pos of vinesArray" [position]="pos.address"></marker>
+</ngui-map>

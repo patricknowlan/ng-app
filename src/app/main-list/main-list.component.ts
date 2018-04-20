@@ -52,4 +52,8 @@ export class MainListComponent implements OnInit, OnChanges {
       );
   }
 
+  addSelection(item): void {
+    this.vineService.addUserSelection(item);
+  }
+
 }
