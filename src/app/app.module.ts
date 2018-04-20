@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 
 import { NguiMapModule } from '@ngui/map';
@@ -15,18 +16,7 @@ import { MainListComponent } from './main-list/main-list.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { InfoComponent } from './info/info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: DashboardComponent },
-  { path: 'info', component: InfoComponent }
-  // { path: 'home', component: AppComponent,
-  //   children: [
-  //     { path: 'wineries', component: WineryComponent },
-  //     { path: 'breweries', component: BreweryComponent }
-  //   ]
-  // }
-];
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -39,17 +29,16 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
-    ),
+    AppRoutingModule,
     HttpClientModule,
     MatListModule,
+    MatCardModule,
     NguiMapModule.forRoot({
       apiUrl:
         'https://maps.google.com/maps/api/js?key=AIzaSyCs5uneLE643PYoZugfiH2XtyW492lamRc'
     }),
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   providers: [VineService],
   bootstrap: [AppComponent]
