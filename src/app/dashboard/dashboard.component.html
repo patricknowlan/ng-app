@@ -5,6 +5,10 @@
   </div>
 
   <div class="map">
-    <app-route-map></app-route-map>
+    <app-route-map [mapMarkers]="coordinates"></app-route-map>
+  </div>
+
+  <div class="create-route-button">
+    <button (click)="createMap();">Create Itinerary</button>
   </div>
 </div>

@@ -6,3 +6,20 @@
 .list {
 overflow: auto;
 }
+.create-route-button button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background-color: #7F1734;
+  color: #FFFFFF;
+  padding: 7px 25px;
+  font-size: 1.3em;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.create-route-button button:hover {
+  cursor: pointer;
+  background-color: rgb(99, 15, 39);
+  box-shadow: 2px 2px 2px #888888;
+}

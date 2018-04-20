@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 import { } from '@types/googlemaps';
 
@@ -8,6 +8,8 @@ import { } from '@types/googlemaps';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+  @Input() mapMarkers: Array<any>;
+  public vinesArray: Array<any>;
 
   public mapOptions: Object = {
     center: { lat: 37.4316, lng: -78.6569 },
@@ -17,6 +19,13 @@ export class MapComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    for (let propName in changes) {
+      let change = changes[propName];
+      this.vinesArray = change.currentValue;
+    }
   }
 
 }

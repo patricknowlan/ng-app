@@ -1,6 +1,6 @@
 <mat-selection-list #vineryList>
   <mat-nav-list>
-      <mat-list-option *ngFor="let vine of vines">
+      <mat-list-option *ngFor="let vine of vines" (click)="addSelection(vine);">
           {{ vine.name }}
         </mat-list-option>
     </mat-nav-list>
